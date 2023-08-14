@@ -5,4 +5,4 @@
 	<title>Barista.io - Grids</title>
 </svelte:head>
 
-<h1 class="text-3xl">Grids</h1>
+<h1 class="font-manrope text-3xl">Grids</h1>
