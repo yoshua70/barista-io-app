@@ -1,7 +1,6 @@
 <script>
+	/** @type {import('./$types').PageData} */
 	export let data;
-	let { supabase } = data;
-	$: ({ supabase } = data);
 
 	import GridCreator from './components/GridCreator.svelte';
 	import GridList from './components/GridList.svelte';
@@ -14,5 +13,5 @@
 <div class="flex flex-col gap-8">
 	<h1 class="font-manrope text-2xl font-bold">Grids</h1>
 	<GridCreator />
-	<GridList />
+	<GridList gridList={data.gridList} />
 </div>
