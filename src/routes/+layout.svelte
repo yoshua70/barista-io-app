@@ -1,5 +1,10 @@
 <script>
-	import '../app.css';
 </script>
 
-<slot />
+<svelte:head>
+	<title>Barista.IO</title>
+</svelte:head>
+
+<div>
+	<slot />
+</div>

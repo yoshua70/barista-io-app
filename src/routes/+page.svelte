@@ -16,7 +16,8 @@
 			<input name="password" id="password" type="password" class="bg-gray-300 px-4 py-2" />
 		</div>
 		<button class="px-4 py-2 bg-gray-900 text-white w-fit m-auto">Sign up</button>
+		<p class="text-center">
+			Already register ? Please log in <a href="#" class="underline text-blue-500">here.</a>
+		</p>
 	</form>
-
-	<p>Already register ? Please log in <a href="#" class="underline text-blue-500">here.</a></p>
 </div>
