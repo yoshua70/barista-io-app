@@ -1,5 +1,6 @@
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from "$env/static/public";
 import { createSupabaseServerClient } from "@supabase/auth-helpers-sveltekit";
+import { redirect } from "@sveltejs/kit";
 
 export const handle = async ({event, resolve}) => {
     event.locals.supabase = createSupabaseServerClient({
@@ -18,6 +19,16 @@ export const handle = async ({event, resolve}) => {
             data: {session},
         } = await event.locals.supabase.auth.getSession()
         return session
+    }
+
+    /**
+     * Protects all routes under `/user`
+     */
+    if (event.url.pathname.startsWith('/user')) {
+        const session = await event.locals.getSession()
+        if (!session) {
+            throw redirect(303, '/')
+        }
     }
 
     /**
