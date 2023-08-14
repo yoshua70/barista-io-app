@@ -34,6 +34,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Barista.io</title>
+</svelte:head>
+
 <div class="flex flex-col min-h-screen items-center justify-center w-full">
 	<h1 class="text-7xl font-bold mb-4">Barista.io</h1>
 	<p class="text-xl mb-8">Create a restaurant layout, and start taking orders !</p>
