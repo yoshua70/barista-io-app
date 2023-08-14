@@ -12,21 +12,30 @@
 	 */
 	let password;
 
+	/**
+	 * @type string | undefined
+	 */
+	let authenticationErrorMessage = '';
+
 	const handleSignUp = async () => {
-		await supabase.auth.signUp({
+		const { error } = await supabase.auth.signUp({
 			email,
 			password,
 			options: {
 				emailRedirectTo: `${location.origin}/auth/callback`
 			}
 		});
+
+		authenticationErrorMessage = error?.message;
 	};
 
 	const handleSignIn = async () => {
-		await supabase.auth.signInWithPassword({
+		const { error } = await supabase.auth.signInWithPassword({
 			email,
 			password
 		});
+
+		authenticationErrorMessage = error?.message;
 	};
 
 	const handleSignOut = async () => {
@@ -75,5 +84,6 @@
 		>
 
 		<p>Already register ? Please log in <a href="/" class="underline text-blue-500">here.</a></p>
+		<p class="text-red-500">{authenticationErrorMessage}</p>
 	</div>
 </div>
