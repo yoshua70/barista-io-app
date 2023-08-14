@@ -26,7 +26,7 @@
 			}
 		});
 
-		authenticationErrorMessage = error?.message;
+		authenticationErrorMessage = error ? error.message : '';
 	};
 
 	const handleSignIn = async () => {
@@ -35,7 +35,7 @@
 			password
 		});
 
-		authenticationErrorMessage = error?.message;
+		authenticationErrorMessage = error ? error.message : '';
 	};
 
 	const handleSignOut = async () => {
