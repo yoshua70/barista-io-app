@@ -18,7 +18,7 @@
 		</div>
 		<button class="font-bold text-red-500 text-left" on:click={handleSignOut}>Sign out</button>
 	</div>
-	<div class="col-span-5 m-4 bg-white rounded-md p-4">
+	<div class="col-span-5 m-4 bg-white rounded-md p-8">
 		<slot />
 	</div>
 </div>
