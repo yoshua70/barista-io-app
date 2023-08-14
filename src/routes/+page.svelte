@@ -50,7 +50,7 @@
 <div class="flex flex-col min-h-screen items-center justify-center w-full">
 	<h1 class="text-7xl font-bold mb-4">Barista.io</h1>
 	<p class="text-xl mb-8">Create a restaurant layout, and start taking orders !</p>
-	<div class="flex flex-col gap-4 rounded-md border-2 bg-white px-8 py-12">
+	<div class="flex flex-col gap-4 rounded-md drop-shadow-md bg-white px-12 py-12">
 		<form on:submit={handleSignUp} class="flex flex-col gap-4 w-[400px] m-auto border-gray-900">
 			<div class="flex flex-col gap-2">
 				<label for="email">Email</label>
