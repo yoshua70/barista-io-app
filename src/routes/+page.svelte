@@ -17,7 +17,7 @@
 		</div>
 		<button class="px-4 py-2 bg-gray-900 text-white w-fit m-auto">Sign up</button>
 		<p class="text-center">
-			Already register ? Please log in <a href="#" class="underline text-blue-500">here.</a>
+			Already register ? Please log in <a href="/" class="underline text-blue-500">here.</a>
 		</p>
 	</form>
 </div>
