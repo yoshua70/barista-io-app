@@ -35,6 +35,8 @@
 </script>
 
 <div class="flex flex-col min-h-screen items-center justify-center w-full">
+	<h1 class="text-7xl font-bold mb-4">Barista.io</h1>
+	<p class="text-xl mb-8">Create a restaurant layout, and start taking orders !</p>
 	<div class="flex flex-col gap-4 border-2 bg-white px-4 py-8">
 		<form on:submit={handleSignUp} class="flex flex-col gap-4 w-[400px] m-auto border-gray-900">
 			<div class="flex flex-col gap-2">
