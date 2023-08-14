@@ -88,7 +88,6 @@
 			>Sign out</button
 		>
 
-		<p>Already register ? Please log in <a href="/" class="underline text-blue-500">here.</a></p>
 		<p class="text-red-500">{authenticationErrorMessage}</p>
 	</div>
 </div>
