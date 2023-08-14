@@ -50,7 +50,7 @@
 <div class="flex flex-col min-h-screen items-center justify-center w-full">
 	<h1 class="text-7xl font-bold mb-4">Barista.io</h1>
 	<p class="text-xl mb-8">Create a restaurant layout, and start taking orders !</p>
-	<div class="flex flex-col gap-4 border-2 bg-white px-4 py-8">
+	<div class="flex flex-col gap-4 rounded-md border-2 bg-white px-8 py-12">
 		<form on:submit={handleSignUp} class="flex flex-col gap-4 w-[400px] m-auto border-gray-900">
 			<div class="flex flex-col gap-2">
 				<label for="email">Email</label>
@@ -58,7 +58,7 @@
 					name="email"
 					id="email"
 					type="email"
-					class="bg-gray-300 px-4 py-2"
+					class="px-4 py-4 rounded-md bg-gray-100"
 					bind:value={email}
 				/>
 			</div>
@@ -68,18 +68,23 @@
 					name="password"
 					id="password"
 					type="password"
-					class="bg-gray-300 px-4 py-2"
+					class="px-4 py-4 rounded-md bg-gray-100"
 					bind:value={password}
 				/>
 			</div>
-			<button class="px-4 py-2 bg-gray-900 text-white w-full m-auto">Sign up</button>
+			<button
+				class="px-4 py-4 rounded-md bg-blue-300 text-black w-full m-auto font-poppins font-semibold hover:bg-blue-200 transition-all duration-150"
+				>Sign up</button
+			>
 		</form>
 		<button
 			on:click={handleSignIn}
-			class="px-4 py-2 bg-white text-gray-900 w-full m-auto border-2 border-gray-900"
+			class="px-4 py-4 rounded-md bg-gray-300 text-black w-full m-auto font-poppins font-semibold hover:bg-gray-200 transition-all duration-150"
 			>Sign in</button
 		>
-		<button on:click={handleSignOut} class="px-4 py-2 bg-red-500 text-white w-full m-auto"
+		<button
+			on:click={handleSignOut}
+			class="px-4 py-4 rounded-md bg-red-300 text-black w-full m-auto font-poppins font-semibold hover:bg-red-200 transition-all duration-150"
 			>Sign out</button
 		>
 
