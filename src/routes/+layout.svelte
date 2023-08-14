@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-	<title>Barista.IO</title>
+	<title>Barista.io</title>
 </svelte:head>
 
 <div>
