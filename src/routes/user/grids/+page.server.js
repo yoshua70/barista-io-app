@@ -41,12 +41,7 @@ export const actions = {
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ locals }) {
 
-    console.log(await locals.getSession())
-
     const {data, error} = await locals.supabase.from('grid').select(`name, rows, columns, description`)
-
-    console.log("Data", data)
-    console.log("Error", error)
 
     return {
       gridList: data

@@ -1,7 +1,5 @@
 <script>
 	export let gridList;
-
-	console.log(gridList);
 </script>
 
 <div class="flex flex-col gap-8 rounded-md bg-white drop-shadow-xl p-8">
