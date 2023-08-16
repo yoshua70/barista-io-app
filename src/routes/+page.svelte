@@ -19,6 +19,11 @@
 	 */
 	let authenticationErrorMessage = '';
 
+	/**
+	 * @type string | undefined
+	 */
+	let successfulSignUpMessage = '';
+
 	const handleSignUp = async () => {
 		const { error } = await supabase.auth.signUp({
 			email,
@@ -28,7 +33,12 @@
 			}
 		});
 
-		authenticationErrorMessage = error ? error.message : '';
+		if (!error) {
+			successfulSignUpMessage =
+				'We have sent you a link to confirm your email. Please, check your inbox.';
+		} else {
+			authenticationErrorMessage = error.message;
+		}
 	};
 
 	const handleSignIn = async () => {
@@ -95,5 +105,6 @@
 		>
 
 		<p class="text-red-500">{authenticationErrorMessage}</p>
+		<p>{successfulSignUpMessage}</p>
 	</div>
 </div>
