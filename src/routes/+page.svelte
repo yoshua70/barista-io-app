@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	export let data;
 	let { supabase } = data;
 	$: ({ supabase } = data);
@@ -34,6 +36,10 @@
 			email,
 			password
 		});
+
+		if (!error) {
+			goto('/user');
+		}
 
 		authenticationErrorMessage = error ? error.message : '';
 	};
