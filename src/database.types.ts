@@ -9,6 +9,34 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      cell: {
+        Row: {
+          grid_id: number | null
+          id: number
+          number: number | null
+          state: boolean | null
+        }
+        Insert: {
+          grid_id?: number | null
+          id?: never
+          number?: number | null
+          state?: boolean | null
+        }
+        Update: {
+          grid_id?: number | null
+          id?: never
+          number?: number | null
+          state?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cell_grid_id_fkey"
+            columns: ["grid_id"]
+            referencedRelation: "grid"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       grid: {
         Row: {
           columns: number | null
