@@ -1,6 +1,4 @@
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
-import { createSupabaseLoadClient } from '@supabase/auth-helpers-sveltekit';
-import { fail } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 
 /**
  * @type {import('./$types').Actions}
@@ -34,7 +32,16 @@ export const actions = {
 
         console.log(error)
         return fail(400, {message: error.message, incorrect: true})
+    },
+    deleteGrid: async (event) => {
+        const id = (await event.request.formData()).get('id')
+        const supabase = event.locals.supabase
+        
+        const {error} = await supabase.from('grid').delete().eq('id', id)
 
+        if (!error) {
+            throw redirect(303, "/user/grids")
+        }
     }
 }
 
